@@ -878,7 +878,7 @@ function displayResults(calculation) {
 function initStripeCheckout() {
   if (!document.body.classList.contains('checkout-page')) return;
   let stripe, elements, card;
-  const stripePublicKey = 'pk_test_51Rnq8BGdHBAUE4It8eH3w8vbIEHua8hBqanxFN0gUCJyGza3v4nUVdzGtNM7zTrrqz2qj0Qjg11fgmVtd7cjSvpg008cMprIn6';
+  const stripePublicKey = 'pk_test_51Rnq8BGdHBAUE4ItmTJqVD9wXs3fRCaYptYzmddc0K0fjtIQsyTFv5v2VrcjtBjUO9Y7VfSwUDT8dr4GIxh930M300w24k8FA6';
   const createPaymentIntentUrl = 'http://localhost:4242/create-payment-intent';
 
   // Render checkout cart summary
