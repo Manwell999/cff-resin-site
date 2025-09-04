@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --resin-blue: #0066ff;
+  --resin-blue-light: #3399ff;
+  --resin-blue-dark: #0044cc;
+  --resin-blue-glow: rgba(0, 102, 255, 0.3);
+  --resin-blue-bright: #00aaff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-resin-blue: var(--resin-blue);
+  --color-resin-blue-light: var(--resin-blue-light);
+  --color-resin-blue-dark: var(--resin-blue-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background: radial-gradient(1400px 800px at 30% -5%, var(--resin-blue-glow), transparent 50%),
+              radial-gradient(1000px 600px at 70% 15%, rgba(0, 170, 255, 0.2), transparent 60%),
+              radial-gradient(800px 500px at 10% 80%, rgba(0, 102, 255, 0.15), transparent 70%),
+              var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  scroll-padding-top: 6rem; /* Account for fixed header height with extra clearance */
+}
+
+.bg-app {
+  background: radial-gradient(1400px 800px at 30% -5%, var(--resin-blue-glow), transparent 50%),
+              radial-gradient(1000px 600px at 70% 15%, rgba(0, 170, 255, 0.2), transparent 60%),
+              radial-gradient(800px 500px at 10% 80%, rgba(0, 102, 255, 0.15), transparent 70%),
+              var(--background);
+}
+
+/* Resin-themed utility classes */
+.text-resin-blue {
+  color: var(--resin-blue);
+}
+
+.text-resin-blue-light {
+  color: var(--resin-blue-light);
+}
+
+.bg-resin-blue {
+  background-color: var(--resin-blue);
+}
+
+.bg-resin-blue-light {
+  background-color: var(--resin-blue-light);
+}
+
+.border-resin-blue {
+  border-color: var(--resin-blue);
+}
+
+.gradient-resin {
+  background: linear-gradient(135deg, var(--resin-blue) 0%, var(--resin-blue-light) 50%, var(--resin-blue-bright) 100%);
+}
+
+.gradient-resin-text {
+  background: linear-gradient(135deg, var(--resin-blue) 0%, var(--resin-blue-light) 50%, var(--resin-blue-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.resin-glow {
+  box-shadow: 0 0 20px var(--resin-blue-glow), 0 0 40px rgba(0, 102, 255, 0.1);
+}
+
+.resin-glow-text {
+  text-shadow: 0 0 10px var(--resin-blue-glow), 0 0 20px rgba(0, 102, 255, 0.3);
 }

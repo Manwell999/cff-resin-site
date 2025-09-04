@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Contact form (Airtable)
+
+1) Create an Airtable base and a table called `Contacts` with fields:
+
+- `Name` (single line text)
+- `Email` (email)
+- `Phone` (single line text)
+- `Message` (long text)
+- `Source` (single line text)
+- `CreatedAt` (date/time)
+
+2) Add environment variables in `.env.local` (create this file in the project root):
+
+```
+AIRTABLE_TOKEN=your_pat_from_airtable
+AIRTABLE_BASE_ID=appXXXXXXX
+AIRTABLE_TABLE_NAME=Contacts
+```
+
+3) Restart your dev server: `npm run dev`
+
+4) In production (Vercel), add the same env vars in Project Settings → Environment Variables and redeploy.
