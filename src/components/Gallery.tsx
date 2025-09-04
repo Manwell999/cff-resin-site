@@ -62,7 +62,7 @@ export default function Gallery() {
     }
   };
 
-  const GallerySection = ({ title, images, id, startIndex }: { title: string; images: any[]; id: string; startIndex: number }) => (
+  const GallerySection = ({ title, images, startIndex }: { title: string; images: { src: string; alt: string; title: string }[]; startIndex: number }) => (
     <div className="mb-16">
       <h3 className="text-xl sm:text-2xl font-semibold tracking-tight gradient-resin-text mb-6">{title}</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -106,14 +106,12 @@ export default function Gallery() {
           <GallerySection 
             title="Countertops & Surfaces" 
             images={countertopImages} 
-            id="countertops"
             startIndex={0}
           />
           
           <GallerySection 
             title="Flooring Solutions" 
             images={flooringImages} 
-            id="flooring"
             startIndex={countertopImages.length}
           />
         </div>
