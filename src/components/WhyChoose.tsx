@@ -9,9 +9,9 @@ function Card({ title, description }: { title: string; description: string }) {
 
 export default function WhyChoose() {
   return (
-    <section className="mt-20">
+    <section className="mt-20" id="why">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight gradient-resin-text" id="why">Why Choose Us</h2>
+        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight gradient-resin-text">Why Choose Us</h2>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card title="Premium Craftsmanship" description="We use top-tier epoxy materials and meticulous techniques to create stunning floors, custom tables, and artistic pieces built to last." />
           <Card title="Custom Creations" description="From luxury epoxy tables to unique floor designs and artwork, we bring your vision to life with fully personalized solutions." />

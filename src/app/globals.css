@@ -20,6 +20,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: radial-gradient(1400px 800px at 30% -5%, var(--resin-blue-glow), transparent 50%),
               radial-gradient(1000px 600px at 70% 15%, rgba(0, 170, 255, 0.2), transparent 60%),
@@ -28,7 +32,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  scroll-padding-top: 6rem; /* Account for fixed header height with extra clearance */
+  scroll-padding-top: 5rem; /* Account for fixed header height (4rem) with small clearance */
 }
 
 .bg-app {
@@ -76,4 +80,9 @@ body {
 
 .resin-glow-text {
   text-shadow: 0 0 10px var(--resin-blue-glow), 0 0 20px rgba(0, 102, 255, 0.3);
+}
+
+/* Ensure proper scroll positioning for sections with fixed header */
+section[id] {
+  scroll-margin-top: 5rem;
 }
