@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFF Resin - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link"><span class="nav-logo-text">CFF Resin</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="store.html" class="nav-link">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#showcase" class="nav-link">Showcase</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="cart-icon" tabindex="0">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to CFF Resin</h1>
+                <p class="hero-subtitle">Discover custom epoxy solutions for homes and businesses</p>
+                <div class="hero-buttons">
+                    <a href="store.html" class="btn btn-primary">Shop Now</a>
+                    <a href="#calculator" class="btn btn-primary">Calculate Materials</a>
+                    <a href="#about" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Premium Craftsmanship</h3>
+                    <p>We use top-tier epoxy materials and meticulous techniques to create stunning floors, custom tables, and artistic pieces built to last.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Custom Creations</h3>
+                    <p>From luxury epoxy tables to unique floor designs and artwork, we bring your vision to life with fully personalized solutions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe & Professional</h3>
+                    <p>Every project follows strict safety protocols and is completed with expert precision—ensuring beautiful, durable, and safe results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About CFF Resin</h2>
+                    <p>We are passionate about providing the highest quality resin products and materials to artists, craftsmen, and creators. With years of experience in the resin industry, we understand what our customers need and strive to exceed their expectations.</p>
+                    <p>Our mission is to deliver exceptional resin products while maintaining the highest standards of quality and customer service for all your creative projects.</p>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <i class="fas fa-building"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+
+            <h2 class="section-title" style="margin-top: 4rem;">Gallery</h2>
+            <div class="showcase-grid">
+                <img src="showcase1.jpg" alt="Showcase 1" class="showcase-img" onclick="openLightbox(this)">
+                <img src="showcase2.jpg" alt="Showcase 2" class="showcase-img" onclick="openLightbox(this)">
+                <img src="showcase3.jpg" alt="Showcase 3" class="showcase-img" onclick="openLightbox(this)">
+                <img src="showcase4.jpg" alt="Showcase 4" class="showcase-img" onclick="openLightbox(this)">
+                <img src="showcase5.jpg" alt="Showcase 5" class="showcase-img" onclick="openLightbox(this)">
+                <img src="showcase6.jpg" alt="Showcase 6" class="showcase-img" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Material Calculator Section -->
+    <section class="material-calculator" id="calculator">
+        <div class="container">
+            <h2 class="section-title">Material Calculator</h2>
+            
+            <div class="calculator-content">
+                <div class="calculator-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="project-type"><i class="fas fa-layer-group"></i> Project Type</label>
+                            <select id="project-type" required>
+                                <option value="">Select Project Type...</option>
+                                <option value="floor">Floor Coating</option>
+                                <option value="table">Epoxy Table</option>
+                                <option value="countertop">Countertop</option>
+                                <option value="art">Art/Casting Project</option>
+                                <option value="garage">Garage Floor</option>
+                                <option value="commercial">Commercial Space</option>
+                                <option value="basement">Basement Floor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="finish-type"><i class="fas fa-palette"></i> Finish Type</label>
+                            <select id="finish-type" required>
+                                <option value="">Select Finish...</option>
+                                <option value="clear">Clear Coat</option>
+                                <option value="metallic">Metallic Epoxy</option>
+                                <option value="flake">Decorative Flake</option>
+                                <option value="solid">Solid Color</option>
+                                <option value="quartz">Quartz Broadcast</option>
+                                <option value="terrazzo">Terrazzo Style</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="length"><i class="fas fa-ruler"></i> Length (feet)</label>
+                            <input type="number" id="length" min="0" step="0.1" placeholder="e.g. 12">
+                        </div>
+                        <div class="form-group">
+                            <label for="width"><i class="fas fa-ruler"></i> Width (feet)</label>
+                            <input type="number" id="width" min="0" step="0.1" placeholder="e.g. 8">
+                        </div>
+                        <div class="form-group">
+                            <label for="thickness"><i class="fas fa-arrows-alt-v"></i> Thickness (inches)</label>
+                            <select id="thickness">
+                                <option value="0.125">1/8" (Standard)</option>
+                                <option value="0.25">1/4" (Heavy Duty)</option>
+                                <option value="0.5">1/2" (Ultra Thick)</option>
+                                <option value="1">1" (Thick Pour)</option>
+                                <option value="2">2" (Deep Pour)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="substrate-type"><i class="fas fa-layer-group"></i> Substrate Type</label>
+                            <select id="substrate-type">
+                                <option value="concrete">Concrete</option>
+                                <option value="wood">Wood</option>
+                                <option value="metal">Metal</option>
+                                <option value="existing-coating">Existing Coating</option>
+                                <option value="plywood">Plywood</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="surface-condition"><i class="fas fa-hard-hat"></i> Surface Condition</label>
+                            <select id="surface-condition">
+                                <option value="new">New/Excellent</option>
+                                <option value="good">Good (Minor prep needed)</option>
+                                <option value="fair">Fair (Moderate prep needed)</option>
+                                <option value="poor">Poor (Extensive prep needed)</option>
+                                <option value="damaged">Damaged (Repair required)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="temperature"><i class="fas fa-thermometer-half"></i> Temperature (°F)</label>
+                            <select id="temperature">
+                                <option value="cold">Cold (50-65°F)</option>
+                                <option value="normal" selected>Normal (65-75°F)</option>
+                                <option value="warm">Warm (75-85°F)</option>
+                                <option value="hot">Hot (85°F+)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="humidity"><i class="fas fa-tint"></i> Humidity Level</label>
+                            <select id="humidity">
+                                <option value="low">Low (0-40%)</option>
+                                <option value="normal" selected>Normal (40-60%)</option>
+                                <option value="high">High (60-80%)</option>
+                                <option value="very-high">Very High (80%+)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="traffic-level"><i class="fas fa-walking"></i> Expected Traffic</label>
+                            <select id="traffic-level">
+                                <option value="light">Light (Residential)</option>
+                                <option value="medium">Medium (Light Commercial)</option>
+                                <option value="heavy">Heavy (Commercial)</option>
+                                <option value="industrial">Industrial (Heavy Duty)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-tools"></i> Additional Options</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="include-tools">
+                                    <span class="checkmark"></span>
+                                    Include basic tools
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="include-sealer">
+                                    <span class="checkmark"></span>
+                                    Include topcoat sealer
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="rush-delivery">
+                                    <span class="checkmark"></span>
+                                    Rush delivery (+15%)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary" id="calculate-btn">
+                        <i class="fas fa-calculator"></i> Calculate Materials
+                    </button>
+                </div>
+                
+                <div class="calculator-results" id="calculator-results" style="display: none;">
+                    <h3><i class="fas fa-shopping-list"></i> Your Material List</h3>
+                    <div class="results-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">Project Area:</span>
+                            <span class="summary-value" id="total-area">0 sq ft</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Total Volume:</span>
+                            <span class="summary-value" id="total-volume">0 gallons</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Estimated Cost:</span>
+                            <span class="summary-value" id="total-cost">$0.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="materials-list" id="materials-list">
+                        <!-- Materials will be populated here -->
+                    </div>
+                    
+                    <div class="results-actions">
+                        <button class="btn btn-primary" id="add-all-to-cart">
+                            <i class="fas fa-cart-plus"></i> Add All to Cart
+                        </button>
+                        <button class="btn btn-secondary" id="get-quote-btn">
+                            <i class="fas fa-phone"></i> Get Professional Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Simple Contact Info -->
+            <div class="contact-info-simple" id="contact">
+                <h3>Need Help or Professional Installation?</h3>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(319) 750-2648</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>scootermeds@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Fort Madison, IA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CFF Resin</h3>
+                    <p>Providing exceptional resin products and materials since 2024.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="store.html">Store</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61551763236317&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@cffresin"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/cffresin?igsh=NG1hZDg5eDZjbW1p" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CFF Resin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-cart" id="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total: $<span id="cart-total">0.00</span></span>
+                </div>
+                <button class="btn btn-primary" id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <button class="lightbox-arrow lightbox-prev" onclick="navigateLightbox(-1)">&lt;</button>
+        <button class="lightbox-arrow lightbox-next" onclick="navigateLightbox(1)">&gt;</button>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Full Size">
+    </div>
+
+    
+</body>
+</html> 

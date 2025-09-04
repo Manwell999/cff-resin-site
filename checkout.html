@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - CFF Resin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="checkout-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link"><span class="nav-logo-text">CFF Resin</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="checkout-header">
+        <div class="container dark-container">
+            <h1>Checkout</h1>
+            <p>Complete your purchase below</p>
+        </div>
+    </section>
+    <section class="checkout-content">
+        <div class="container checkout-flex dark-container">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="checkout-cart-items">
+                    <!-- Cart items will be loaded here by JavaScript -->
+                </div>
+                <div class="checkout-total">
+                    <strong>Total: $<span id="checkout-cart-total">0.00</span></strong>
+                </div>
+                <a href="store.html" class="btn btn-secondary" style="margin-top:1rem;">Back to Store</a>
+            </div>
+            <!-- Checkout Form -->
+            <form class="checkout-form" id="checkout-form">
+                <h2>Shipping Details</h2>
+                <div class="form-group">
+                    <label for="checkout-name">Full Name</label>
+                    <input type="text" id="checkout-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-email">Email</label>
+                    <input type="email" id="checkout-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-address">Shipping Address</label>
+                    <input type="text" id="checkout-address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-payment">Payment Method</label>
+                    <select id="checkout-payment" name="payment" required>
+                        <option value="card">Credit Card</option>
+                        <option value="paypal" disabled>PayPal (Coming Soon)</option>
+                        <option value="other" disabled>Other (Coming Soon)</option>
+                    </select>
+                </div>
+                <div class="form-group" id="card-element-group" style="display:none;">
+                    <label for="card-element">Card Details</label>
+                    <div id="card-element" style="background:#181a1b; border-radius:8px; padding:12px;"></div>
+                    <div id="card-errors" role="alert" style="color:#ef4444; margin-top:0.5em;"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Place Order</button>
+                <div id="checkout-success" style="display:none; color: #10b981; margin-top:1rem;">Thank you for your order!</div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CFF Resin</h3>
+                    <p>Providing exceptional resin products and materials since 2024.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="store.html">Store</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CFF Resin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-cart" id="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total: $<span id="cart-total">0.00</span></span>
+                </div>
+                <button class="btn btn-primary" id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="script.js"></script>
+    <!-- Stripe Elements are initialized in script.js -->
+</body>
+</html> 
